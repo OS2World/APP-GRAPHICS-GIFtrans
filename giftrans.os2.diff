@@ -1,0 +1,13 @@
+131,138d130
+< #define	X11		/* When using X Window System */
+< #undef	OPENWIN		/* When using Open Windows */
+< #undef	X386		/* When using XFree86 with FreeBSD/386BSD */
+< #undef	OS2		/* When using IBM C/C++ 2.0 */
+< #ifndef	MSDOS	/* required for TurboC 1.0 */
+< #undef	MSDOS		/* When using Borland C (maybe MSC too) */
+< #endif
+< 
+183a176
+> #ifndef GCC
+184a178
+> #endif /* GCC */

@@ -1,0 +1,31 @@
+*** giftrans.bak.c	Sat Aug 05 14:48:54 1995
+--- giftrans.c	Sat Aug 05 15:03:00 1995
+***************
+*** 128,141 ****
+  **	ftp://ftp.uu.net/doc/literary/obi/Standards/Graphics/Formats/gif89a.doc.Z
+  */
+  
+- #define	X11		/* When using X Window System */
+- #undef	OPENWIN		/* When using Open Windows */
+- #undef	X386		/* When using XFree86 with FreeBSD/386BSD */
+- #undef	OS2		/* When using IBM C/C++ 2.0 */
+- #ifndef	MSDOS	/* required for TurboC 1.0 */
+- #undef	MSDOS		/* When using Borland C (maybe MSC too) */
+- #endif
+- 
+  #ifndef OS2_OR_MSDOS
+  #ifdef OS2
+  #define OS2_OR_MSDOS
+--- 128,133 ----
+***************
+*** 181,187 ****
+--- 173,181 ----
+  #ifdef OS2
+  #include <io.h>
+  #endif /* OS2 */
++ #ifndef GCC
+  #include "getopt.c"
++ #endif /* GCC */
+  #endif /* OS2_OR_MSDOS */
+  
+  #ifndef MAXPATHLEN
